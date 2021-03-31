@@ -15,7 +15,7 @@ class PresentViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        greetingLabel.text = "Welcome, " + greeting + "!"
+        greetingLabel.text = "Welcome, \(greeting!)!"
     }
     
     

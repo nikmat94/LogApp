@@ -12,7 +12,7 @@ class LoginViewController: UIViewController {
     @IBOutlet var nameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
     
-    private var userName = "admin"
+    private let userName = "admin"
     private let password = "qwerty"
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -21,8 +21,13 @@ class LoginViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(false)
+        super .touchesBegan(touches, with: event)
+    }
+    
     @IBAction func goingToGreetingButton() {
         if userName != nameTF.text || password != passwordTF.text {
             showAlert(with: "Error!", and: "Enter your correct name and password")
@@ -42,13 +47,8 @@ class LoginViewController: UIViewController {
         nameTF.text = ""
         passwordTF.text = ""
     }
-    
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        view.endEditing(false)
-        super .touchesBegan(touches, with: event)
     }
 
-}
 extension LoginViewController {
     private func showAlert(with title: String, and message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
