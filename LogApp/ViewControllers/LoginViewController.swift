@@ -16,9 +16,12 @@ class LoginViewController: UIViewController {
     private let password = "qwerty"
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let loginVC = segue.destination as? PresentViewController else { return }
-        loginVC.greeting = nameTF.text
-    }
+        let tabBarController = segue.destination as! UITabBarController
+        let presentVC = tabBarController.viewControllers![0] as! PresentViewController
+        presentVC.greeting = nameTF.text
+        }
+        
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
