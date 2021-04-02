@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina3_5" orientation="portrait" appearance="light"/>
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -13,7 +14,7 @@
             <objects>
                 <viewController title="Login View " id="BYZ-38-t0r" customClass="LoginViewController" customModule="LogApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="WkP-mB-0hs">
@@ -99,39 +100,49 @@
             <objects>
                 <viewController title="Present Name View" id="fCX-JC-Uw0" customClass="PresentViewController" customModule="LogApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7Ch-ts-wLB" customClass="Present">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Kh-Rg-08S">
-                                <rect key="frame" x="88" y="207" width="144" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="3eY-k6-JCY"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UcB-yb-N0v">
-                                <rect key="frame" x="125" y="360" width="70" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Log Out"/>
-                                <connections>
-                                    <action selector="goBack" destination="F9l-yy-9Hh" eventType="touchUpInside" id="ESS-IS-Ujz"/>
-                                    <segue destination="M8W-bO-mFi" kind="unwind" unwindAction="unwindFor:" id="O5c-Xu-s1S"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="105" translatesAutoresizingMaskIntoConstraints="NO" id="iZ7-cW-t1G">
+                                <rect key="frame" x="20" y="154.5" width="280" height="259"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Kh-Rg-08S">
+                                        <rect key="frame" x="0.0" y="0.0" width="280" height="27.5"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Label">
+                                                <attributes>
+                                                    <font key="NSFont" size="25" name="MarkerFelt-Thin"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UcB-yb-N0v">
+                                        <rect key="frame" x="0.0" y="132.5" width="280" height="126.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Log Out"/>
+                                        <connections>
+                                            <action selector="goBack" destination="F9l-yy-9Hh" eventType="touchUpInside" id="ESS-IS-Ujz"/>
+                                            <segue destination="M8W-bO-mFi" kind="unwind" unwindAction="unwindFor:" id="O5c-Xu-s1S"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="d2C-J4-3e2"/>
                         <color key="backgroundColor" systemColor="systemGray5Color"/>
                         <constraints>
-                            <constraint firstItem="8Kh-Rg-08S" firstAttribute="leading" secondItem="d2C-J4-3e2" secondAttribute="leading" constant="88" id="1At-8F-TTV"/>
-                            <constraint firstItem="UcB-yb-N0v" firstAttribute="top" secondItem="8Kh-Rg-08S" secondAttribute="bottom" constant="123" id="XGh-yE-xBm"/>
-                            <constraint firstItem="UcB-yb-N0v" firstAttribute="centerX" secondItem="7Ch-ts-wLB" secondAttribute="centerX" id="anS-JW-66E"/>
-                            <constraint firstItem="d2C-J4-3e2" firstAttribute="trailing" secondItem="8Kh-Rg-08S" secondAttribute="trailing" constant="88" id="nOm-vO-9vJ"/>
-                            <constraint firstItem="8Kh-Rg-08S" firstAttribute="top" secondItem="d2C-J4-3e2" secondAttribute="top" constant="207" id="zIb-R5-AyS"/>
+                            <constraint firstItem="iZ7-cW-t1G" firstAttribute="top" secondItem="d2C-J4-3e2" secondAttribute="top" constant="154.5" id="401-uJ-F6W"/>
+                            <constraint firstItem="d2C-J4-3e2" firstAttribute="bottom" secondItem="iZ7-cW-t1G" secondAttribute="bottom" constant="105.5" id="BQF-bD-h2N"/>
+                            <constraint firstItem="iZ7-cW-t1G" firstAttribute="leading" secondItem="d2C-J4-3e2" secondAttribute="leading" constant="20" id="HAr-2o-9Ko"/>
+                            <constraint firstItem="d2C-J4-3e2" firstAttribute="trailing" secondItem="iZ7-cW-t1G" secondAttribute="trailing" constant="20" id="PVT-ha-Y9k"/>
+                            <constraint firstItem="iZ7-cW-t1G" firstAttribute="centerY" secondItem="7Ch-ts-wLB" secondAttribute="centerY" id="uRN-zd-87v"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="EIo-aR-bBY"/>
+                    <tabBarItem key="tabBarItem" title="Приветствие" selectedImage="arrowtriangle.right.fill" catalog="system" id="EIo-aR-bBY">
+                        <color key="badgeColor" name="AccentColor"/>
+                    </tabBarItem>
                     <navigationItem key="navigationItem" id="ycq-i4-Hhm"/>
                     <connections>
                         <outlet property="greetingLabel" destination="8Kh-Rg-08S" id="o1x-Xz-uEp"/>
@@ -160,22 +171,75 @@
             </objects>
             <point key="canvasLocation" x="943" y="898"/>
         </scene>
-        <!--Item-->
+        <!--About me-->
         <scene sceneID="C1q-hN-65e">
             <objects>
-                <viewController id="Tv4-s8-WFT" sceneMemberID="viewController">
+                <viewController id="Tv4-s8-WFT" customClass="AboutMeViewController" customModule="LogApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="T4r-Sp-axm">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="oBP-hn-J8W">
+                                <rect key="frame" x="20" y="210" width="280" height="148.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vLO-2j-acz">
+                                        <rect key="frame" x="62" y="0.0" width="156.5" height="30"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Немного о себе">
+                                                <attributes>
+                                                    <font key="NSFont" size="23" name="MarkerFelt-Wide"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LHB-Qr-a3m">
+                                        <rect key="frame" x="121.5" y="130" width="37" height="18.5"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Label">
+                                                <attributes>
+                                                    <font key="NSFont" size="17" name="MarkerFelt-Thin"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mXx-1M-Xsv">
+                                <rect key="frame" x="194" y="20" width="110" height="30"/>
+                                <state key="normal" title="Мои увлечения"/>
+                                <connections>
+                                    <segue destination="qzc-nr-0w8" kind="popoverPresentation" identifier="toHabbits" popoverAnchorView="mXx-1M-Xsv" id="Sf1-QO-v0K">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="GTY-bS-TnO"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                        <constraints>
+                            <constraint firstItem="GTY-bS-TnO" firstAttribute="trailing" secondItem="mXx-1M-Xsv" secondAttribute="trailing" constant="16" id="94g-q0-3lo"/>
+                            <constraint firstItem="GTY-bS-TnO" firstAttribute="trailing" secondItem="oBP-hn-J8W" secondAttribute="trailing" constant="20" id="BNn-tY-q2M"/>
+                            <constraint firstItem="oBP-hn-J8W" firstAttribute="leading" secondItem="GTY-bS-TnO" secondAttribute="leading" constant="20" id="LpZ-NT-dJi"/>
+                            <constraint firstItem="mXx-1M-Xsv" firstAttribute="top" secondItem="GTY-bS-TnO" secondAttribute="top" constant="20" id="Yyv-m6-h0S"/>
+                            <constraint firstItem="oBP-hn-J8W" firstAttribute="centerY" secondItem="T4r-Sp-axm" secondAttribute="centerY" id="aXn-Rj-wU9"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="3Ed-Yq-V98"/>
-                    <navigationItem key="navigationItem" id="Rb0-Vy-TEX"/>
+                    <tabBarItem key="tabBarItem" title="Обо мне" selectedImage="person.crop.square.fill" catalog="system" id="3Ed-Yq-V98">
+                        <color key="badgeColor" name="AccentColor"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="About me" id="Rb0-Vy-TEX"/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="aboutMeLabel" destination="LHB-Qr-a3m" id="YhX-WF-iJx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wQQ-Lv-Vea" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3442.5" y="897.5"/>
+            <point key="canvasLocation" x="1755" y="1690"/>
         </scene>
         <!--Item-->
         <scene sceneID="h6D-a3-9xU">
@@ -194,31 +258,71 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qAy-yo-lMH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2488" y="538"/>
+            <point key="canvasLocation" x="711" y="1690"/>
         </scene>
-        <!--View Controller-->
+        <!--My Habbits View Controller-->
         <scene sceneID="nsn-Od-YYj">
             <objects>
-                <viewController id="qzc-nr-0w8" sceneMemberID="viewController">
+                <viewController id="qzc-nr-0w8" customClass="MyHabbitsViewController" customModule="LogApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JHp-tS-RdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="164" translatesAutoresizingMaskIntoConstraints="NO" id="9MQ-KN-4th">
+                                <rect key="frame" x="20" y="20" width="280" height="212.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nIe-BZ-cNE">
+                                        <rect key="frame" x="60.5" y="0.0" width="159" height="30"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Мои увлечения">
+                                                <attributes>
+                                                    <font key="NSFont" size="23" name="MarkerFelt-Wide"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="15" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xw5-3p-ndl">
+                                        <rect key="frame" x="121.5" y="194" width="37" height="18.5"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Label">
+                                                <attributes>
+                                                    <font key="NSFont" size="17" name="MarkerFelt-Thin"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Szi-q9-3As"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                        <constraints>
+                            <constraint firstItem="9MQ-KN-4th" firstAttribute="leading" secondItem="Szi-q9-3As" secondAttribute="leading" constant="20" id="P1Q-Vd-fGa"/>
+                            <constraint firstItem="9MQ-KN-4th" firstAttribute="top" secondItem="Szi-q9-3As" secondAttribute="top" constant="20" id="bej-AH-FmO"/>
+                            <constraint firstItem="Szi-q9-3As" firstAttribute="trailing" secondItem="9MQ-KN-4th" secondAttribute="trailing" constant="20" id="byC-w2-2o0"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="LfA-JZ-Yph"/>
+                    <connections>
+                        <outlet property="myHabbitsLabel" destination="xw5-3p-ndl" id="zOB-Zn-zkx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkl-qn-y1J" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3443" y="1610"/>
+            <point key="canvasLocation" x="2525.625" y="1689.0845070422536"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="bGv-rs-5nL"/>
+        <segue reference="6TQ-aL-Q2c"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <image name="arrowtriangle.right.fill" catalog="system" width="128" height="113"/>
+        <image name="person.crop.square.fill" catalog="system" width="128" height="114"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemGray5Color">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

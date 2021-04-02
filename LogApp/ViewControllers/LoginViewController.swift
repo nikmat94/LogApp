@@ -12,13 +12,24 @@ class LoginViewController: UIViewController {
     @IBOutlet var nameTF: UITextField!
     @IBOutlet var passwordTF: UITextField!
     
-    private let userName = "admin"
-    private let password = "qwerty"
+    let person = Person.getUserInfo()
+
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let tabBarController = segue.destination as! UITabBarController
-        let presentVC = tabBarController.viewControllers![0] as! PresentViewController
-        presentVC.greeting = nameTF.text
+        for viewController in tabBarController.viewControllers! {
+            if let presentVC = viewController as? PresentViewController {
+                presentVC.greeting = "\(person.name) \(person.surname)"
+            }
+            if let aboutMeVC = viewController as? AboutMeViewController {
+                aboutMeVC.aboutMe = person.aboutMe
+            }
+        
+        }
+            
+            
+        
+        
         }
         
     
@@ -32,18 +43,17 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func goingToGreetingButton() {
-        if userName != nameTF.text || password != passwordTF.text {
+        if person.login != nameTF.text || person.password != passwordTF.text {
             showAlert(with: "Error!", and: "Enter your correct name and password")
-            nameTF.text = ""
             passwordTF.text = ""
         }
     }
     @IBAction func alertForgotNameButton() {
-        showAlert(with: "Be careful!", and: "Your name is \(userName)")
+        showAlert(with: "Be careful!", and: "Your name is \(person.login)")
     }
     
     @IBAction func alertForgotPasswordButton() {
-        showAlert(with: "Be careful!", and: "Your password is \(password)")
+        showAlert(with: "Be careful!", and: "Your password is \(person.password)")
     }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {

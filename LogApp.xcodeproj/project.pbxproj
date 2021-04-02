@@ -15,6 +15,8 @@
 		5E4508A52614B7F200137365 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E4508A32614B7F200137365 /* LaunchScreen.storyboard */; };
 		5E4508B32614DD1300137365 /* PresentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4508B22614DD1300137365 /* PresentViewController.swift */; };
 		5E4508C62617A28100137365 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4508C52617A28100137365 /* Person.swift */; };
+		5E4508D12617BB9200137365 /* AboutMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4508D02617BB9200137365 /* AboutMeViewController.swift */; };
+		5E4508D42617CAD200137365 /* MyHabbitsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4508D32617CAD200137365 /* MyHabbitsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		5E4508A62614B7F200137365 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5E4508B22614DD1300137365 /* PresentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentViewController.swift; sourceTree = "<group>"; };
 		5E4508C52617A28100137365 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		5E4508D02617BB9200137365 /* AboutMeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeViewController.swift; sourceTree = "<group>"; };
+		5E4508D32617CAD200137365 /* MyHabbitsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyHabbitsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +78,8 @@
 			children = (
 				5E45089C2614B7F100137365 /* LoginViewController.swift */,
 				5E4508B22614DD1300137365 /* PresentViewController.swift */,
+				5E4508D02617BB9200137365 /* AboutMeViewController.swift */,
+				5E4508D32617CAD200137365 /* MyHabbitsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -187,6 +193,8 @@
 				5E45089D2614B7F100137365 /* LoginViewController.swift in Sources */,
 				5E4508992614B7F100137365 /* AppDelegate.swift in Sources */,
 				5E4508B32614DD1300137365 /* PresentViewController.swift in Sources */,
+				5E4508D42617CAD200137365 /* MyHabbitsViewController.swift in Sources */,
+				5E4508D12617BB9200137365 /* AboutMeViewController.swift in Sources */,
 				5E45089B2614B7F100137365 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
