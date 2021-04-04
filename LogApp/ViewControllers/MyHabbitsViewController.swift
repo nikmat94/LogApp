@@ -17,5 +17,8 @@ class MyHabbitsViewController: UIViewController {
         myHabbitsLabel.text = myHabbits
     }
 
-
+    @IBAction func cancelAction() {
+        dismiss(animated: true)
+    }
+    
 }
