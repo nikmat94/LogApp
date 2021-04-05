@@ -17,6 +17,7 @@
 		5E4508C62617A28100137365 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4508C52617A28100137365 /* Person.swift */; };
 		5E4508D12617BB9200137365 /* AboutMeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4508D02617BB9200137365 /* AboutMeViewController.swift */; };
 		5E4508D42617CAD200137365 /* MyHabbitsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E4508D32617CAD200137365 /* MyHabbitsViewController.swift */; };
+		5E7E4F8D261A87D000B6C0BF /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E7E4F8C261A87D000B6C0BF /* PhotosViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		5E4508C52617A28100137365 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		5E4508D02617BB9200137365 /* AboutMeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutMeViewController.swift; sourceTree = "<group>"; };
 		5E4508D32617CAD200137365 /* MyHabbitsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyHabbitsViewController.swift; sourceTree = "<group>"; };
+		5E7E4F8C261A87D000B6C0BF /* PhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 				5E4508B22614DD1300137365 /* PresentViewController.swift */,
 				5E4508D02617BB9200137365 /* AboutMeViewController.swift */,
 				5E4508D32617CAD200137365 /* MyHabbitsViewController.swift */,
+				5E7E4F8C261A87D000B6C0BF /* PhotosViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -190,6 +193,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5E4508C62617A28100137365 /* Person.swift in Sources */,
+				5E7E4F8D261A87D000B6C0BF /* PhotosViewController.swift in Sources */,
 				5E45089D2614B7F100137365 /* LoginViewController.swift in Sources */,
 				5E4508992614B7F100137365 /* AppDelegate.swift in Sources */,
 				5E4508B32614DD1300137365 /* PresentViewController.swift in Sources */,

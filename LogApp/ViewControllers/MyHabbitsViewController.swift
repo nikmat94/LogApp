@@ -10,6 +10,7 @@ import UIKit
 class MyHabbitsViewController: UIViewController {
 
     @IBOutlet var myHabbitsLabel: UILabel!
+    
     var myHabbits = ""
     
     override func viewDidLoad() {

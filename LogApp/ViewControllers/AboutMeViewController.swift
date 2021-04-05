@@ -10,8 +10,9 @@ import UIKit
 class AboutMeViewController: UIViewController {
 
     @IBOutlet var aboutMeLabel: UILabel!
+    
     var aboutMe = ""
-    let person = Person.getUserInfo()
+    private let person = Person.getUserInfo()
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let myHabbitsVC = segue.destination as! MyHabbitsViewController
